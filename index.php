@@ -11,7 +11,7 @@ and open the template in the editor.
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        <script type="text/javascript">
+        <script>
             $(document).ready(function () {
                 $.ajax({
                     type: 'POST',
@@ -22,7 +22,7 @@ and open the template in the editor.
                        // console.log('success', data);
                         str = "";
                         for (i in data.choices) {
-                            str += "<div class=radio><label><input type=radio  id=select>" + data.choices[i] + "</label></div>";
+                            str += "<div class=radio><label><input type=radio name=optradio id=select>" + data.choices[i] + "</label></div>";
                         }
                         $("#choices").html(str);
                     }
